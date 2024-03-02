@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>QR Code Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3.4em;
+            color: #20bbe6;
+            margin-bottom: 4px;
+            margin-top: 3px;
+        }
+
+        #downloadBtn {
+            display: block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50; 
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #downloadBtn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><span style="font-weight: bold; color: #2973ea;">Qr</span>ify</h1>
+        <h2>Create Your QR Code</h2>
+        <div class="form-group">
+            <label for="text-input">Enter Text or URL:</label>
+            <input type="text" id="text-input" placeholder="https://www.example.com">
+            <button onclick="generateQRCode()">Generate</button>
+        </div>
+        <div id="qr-code-container">
+            <div id="qr-code"></div>
+        </div>
+        <button id="downloadBtn" onclick="downloadQRCode()">Download QR Code</button>
+    </div>
+
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
